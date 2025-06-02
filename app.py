@@ -9,6 +9,15 @@ from helper import feeding_text, extract_text_from_pdf
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.schema import Document
+import sys
+import platform
+
+if platform.system() == "Linux":
+    import pysqlite3
+    sys.modules["sqlite3"] = pysqlite3
+else:
+    import sqlite3  # use default sqlite3 on Windows
+
 
 GEMINI_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
