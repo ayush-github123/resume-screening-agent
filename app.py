@@ -11,7 +11,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.schema import Document
 
-load_dotenv()
+GEMINI_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 def embedding_and_storing_data():
     embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
