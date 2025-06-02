@@ -2,7 +2,6 @@ import streamlit as st
 import os
 import tempfile
 import pandas as pd
-from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from langchain.chains.question_answering import load_qa_chain
