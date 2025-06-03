@@ -34,7 +34,7 @@ def embedding_and_storing_data():
     )
 
     st.set_page_config(page_title="Resume Reader", layout="centered")
-    st.title("Resume Matcher")
+    st.title("Screen Your Resume")
 
     uploaded_files = st.file_uploader("Upload your Resume (PDF only)", type=['pdf'], accept_multiple_files=True)
 
